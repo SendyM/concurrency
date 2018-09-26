@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/threadLocal")
 public class ThreadLocalController {
 
-  @RequestMapping("/test")
-  @ResponseBody
-  public  Long test(){
-       return  RequestHolder.getId();
-  }
+    @RequestMapping("/test")
+    @ResponseBody
+    public Long test() {
+        return RequestHolder.getId();
+    }
 }

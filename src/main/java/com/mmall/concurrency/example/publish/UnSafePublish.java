@@ -1,26 +1,25 @@
 package com.mmall.concurrency.example.publish;
 
 import com.mmall.concurrency.annoations.NotThreadSafe;
-import java.util.Arrays;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.Arrays;
 
 @Slf4j
 @NotThreadSafe
-public class UnSafePublish {
+public class UnsafePublish {
 
-  private String[] states={"a","b","c"};
+    private String[] states = {"a", "b", "c"};
 
-  public  String[] getStates(){
-    return states;
-  }
+    public String[] getStates() {
+        return states;
+    }
 
-  public static void main(String[] args) {
-    UnSafePublish unSafePublish = new UnSafePublish();
-    log.info("{}",Arrays.toString(unSafePublish.getStates()));
+    public static void main(String[] args) {
+        UnsafePublish unsafePublish = new UnsafePublish();
+        log.info("{}", Arrays.toString(unsafePublish.getStates()));
 
-    unSafePublish.getStates()[0]="d";
-
-    log.info("{}",Arrays.toString(unSafePublish.getStates()));
-
-  }
+        unsafePublish.getStates()[0] = "d";
+        log.info("{}", Arrays.toString(unsafePublish.getStates()));
+    }
 }

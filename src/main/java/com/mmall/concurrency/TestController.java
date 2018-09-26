@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Slf4j
 public class TestController {
 
-  @RequestMapping("/test")
-  @ResponseBody
-  public String test() {
-    return "test";
-  }
+    @RequestMapping("/test")
+    @ResponseBody
+    public String test() {
+        return "test";
+    }
 }
